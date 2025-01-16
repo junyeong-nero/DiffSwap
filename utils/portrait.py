@@ -39,7 +39,7 @@ class Portrait(Dataset):
         print(f'len(self.src_list): {len(self.src_list)}')
         self.affine_thetas = json.load(open(f'{root}/affine_theta.json'))
         
-        self.interpolation = {"linear": PIL.Image.LINEAR,
+        self.interpolation = {"linear": PIL.Image.BILINEAR,
                         "bilinear": PIL.Image.BILINEAR,
                         "bicubic": PIL.Image.BICUBIC,
                         "lanczos": PIL.Image.LANCZOS,
